@@ -1,8 +1,12 @@
-function greetingToTheStudants(nameFromStudant, course="curso não definido ainda") {
-  return `Olá, seja bem-vindo(a) ao curso de ${course} ! ${nameFromStudant}`;
-}
-
-const massageFromGreeting1 = greetingToTheStudants('Ermeson', 'Front-end em React');
-const massageFromGreeting2 = greetingToTheStudants('Alessando');
-console.log(massageFromGreeting1);
-console.log(massageFromGreeting2);
+const person = {
+  name: 'Ermeson',
+  age: 17,
+  heigth: 1.70,
+  isProgrammer: true,
+  hobbies: ['Academia', 'futebol'],
+  greeting: () => {
+    console.log(`hello nice to meet to you`);
+  }
+};
+const { name } = person;
+console.log(name);
