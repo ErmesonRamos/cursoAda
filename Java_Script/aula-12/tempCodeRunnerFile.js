@@ -4,11 +4,8 @@ const shoppingCarts = [
   { product: "Leite 1L", price: 6.99 , quantities: 2 },
 ];
 
-const cartWithTotal = shoppingCarts.map((cartItem) => {
-  return {
-    ...cartItem,
-    total: cartItem.price * cartItem.quantities,
-  };
-});
+const totalPrice = shoppingCarts.reduce((acumulador, element) => {
+  return (element.price * element.quantities) + acumulador;
+}, 0);
 
-console.log(cartWithTotal);
+console.log(totalPrice);

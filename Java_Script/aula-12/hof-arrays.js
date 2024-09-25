@@ -60,6 +60,29 @@
 
       O console.log imprime personWithWeigth, mostrando o objeto completo.
 
+  ! filter = filtro
+  ? Array.protype.filter((elementos(todos os elementos de um array), indice(todos os indices de um array), arrayCompleto(Ele retorna todo array completo)));
+    -> O método filter é usado em arrays para criar um novo array contendo apenas os elementos que atendem a uma condição específica. Ele aceita uma função de callback que recebe cada elemento do array, retorna true para os que devem ser incluídos e false para os que devem ser excluídos. O resultado é um array filtrado, mantendo a ordem dos elementos originais. Isso permite que você trabalhe de maneira eficiente com subconjuntos de dados.
+  * Exemplo:
+    const numeros = [1, 2, 3, 4, 5, 6];
+    const pares = numeros.filter(num => num % 2 === 0);
+    console.log(pares); 
+
+  ! reduce = reduzir
+  ? Array.protype.reduce((acumulador(valor inicial), elemento(cada elemento do array), indice(cada indice do array), arrayCompleto(ele retorna todo array completo){}, valorInicial(valor inicial do acumulador));
+  -> Método que executa para cada elemento do array a função que foi passada como parâmentro, resultando em um elemento único Imagine que voçê queira calcular a soma dos elementos do array
+  * Exemplo:
+    const number = [ 1, 2, 3, 4, 5];
+
+    const add = number.reduce((acumulador, element, _, arrayCompleto) => {
+      console.log(acumulador);  
+      return element + acumulador;
+    }, 0);
+
+    console.log(add);
+
+  ! Obs. O _ é ultilizado para ingnora um parâmento e passar para outro
+
 
 */
 // every
