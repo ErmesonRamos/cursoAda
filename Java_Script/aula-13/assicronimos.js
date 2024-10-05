@@ -14,13 +14,16 @@
 
 */
 
-const fs = require("fs");
+const fs = require('fs');
 
 
 // * 1. Callbacks
 
-//Função assincrona (Ler um arquivo leva um tempo)
-fs.readFile("arquivo.txt", (erro, conteudoDoArquivo) => {
+console.log('ANTES da função de ler o arquivo');
+
+//Função assicronas (Ler um arquivo leva um tempo);
+
+fs.readFile('Java_Script/aula-13/arquivo.json', (erro, conteudoDoArquivo) => {
   if(erro) {
     console.log('Ocorreu um erro ao tentar ler o arquivo: ', erro);
   } else {
@@ -28,4 +31,5 @@ fs.readFile("arquivo.txt", (erro, conteudoDoArquivo) => {
   }
 });
 
+console.log('DEPOIS da função de ler o arquivo');
 

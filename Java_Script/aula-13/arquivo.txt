@@ -1,4 +1,0 @@
-
-nome: Ermeson
-age: 17
-heigth: 1.70
