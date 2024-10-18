@@ -12,5 +12,12 @@
     "Heigth": 1.76,
     "Work": "Desenvolvedor Full-Stack",
     "Hobbies": ["Academia", "Xadrez", "Programação", "Futebol"]
+  },
+  {
+    "name": "Alecsander",
+    "age": 17,
+    "Heigth": 1.75,
+    "Work": "Analista de Dados",
+    "Hobbies": ["Academia", "Artes Marciais", "Programação", "Volei"]
   }
 ]

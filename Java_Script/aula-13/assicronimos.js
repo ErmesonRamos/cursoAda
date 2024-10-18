@@ -28,6 +28,10 @@
       2.FullFiled: A promise foi concretizada com sucesso.
       3.Rejected: A promise foi rejeitada, porque houve um erro.
       -> Exemplos de utilização: pegar dados do back-end(API).
+      ?.then(callback) = então;
+        -> O método .then() em JavaScript é utilizado para lidar com promessas (Promises). Ele permite que você execute uma função assim que a promessa for resolvida, ou seja, quando uma operação assíncrona for concluída com sucesso
+      ?.catch(callback) = pegar;
+        -> O .catch() em JavaScript é um método usado em Promises para tratar erros. Ele permite que você especifique o que deve acontecer quando uma Promise é rejeitada, tornando o tratamento de erros mais organizado e legível.
   * 3. Resolvendo promisses ultilizando o Async/Await.
     -> Uma Promise é uma maneira poderosa de trabalhar com operações assíncronas em JavaScript, proporcionando um controle mais eficiente sobre o fluxo de execução e melhorando a legibilidade do código.
 
@@ -65,9 +69,11 @@ setTimeout(() => {
 console.log("DEPOIS do setTimeout");
 
 /* 2. Promisses */
-console.log('ANTES da crição da promise');
-const promessa = new Promise((resolve, reject) => {
-  const fs = require("fs");
+
+
+const fs = require("fs");
+
+const promise = new Promise((resolve, reject) => {
   fs.readFile("Java_Script/aula-13/arquivo.json", (erro, conteudoDoArquivo) => {
     if (erro) {
       reject("Ocorreu um erro ao tentar ler o arquivo: ", erro);
@@ -75,6 +81,13 @@ const promessa = new Promise((resolve, reject) => {
       resolve(String(conteudoDoArquivo));
     }
   });
-}); //Criando uma promessa
-console.log('DEPOIS da crição da promise');
-console.log(promessa);
+});
+
+promise.then((returnOfResolution) => {
+  console.log(`Deu certo: ${returnOfResolution}`);
+}).catch((err) => {
+  console.log(`Deu erro: ${err}`)
+});
+
+
+
