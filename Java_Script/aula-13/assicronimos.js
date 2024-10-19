@@ -32,6 +32,10 @@
         -> O método .then() em JavaScript é utilizado para lidar com promessas (Promises). Ele permite que você execute uma função assim que a promessa for resolvida, ou seja, quando uma operação assíncrona for concluída com sucesso
       ?.catch(callback) = pegar;
         -> O .catch() em JavaScript é um método usado em Promises para tratar erros. Ele permite que você especifique o que deve acontecer quando uma Promise é rejeitada, tornando o tratamento de erros mais organizado e legível.
+      ?.finally(callback) = finalmente;
+        -> Em JavaScript, o método .finally() é usado em Promises para executar um bloco de código após a conclusão de uma operação assíncrona, independentemente de a Promise ter sido resolvida ou rejeitada.
+  * fetch
+      -> O fetch é uma API do JavaScript que permite fazer requisições assíncronas para servidores, geralmente usada para obter ou enviar dados. Ele é uma maneira moderna e mais poderosa de lidar com requisições HTTP
   * 3. Resolvendo promisses ultilizando o Async/Await.
     -> Uma Promise é uma maneira poderosa de trabalhar com operações assíncronas em JavaScript, proporcionando um controle mais eficiente sobre o fluxo de execução e melhorando a legibilidade do código.
 
@@ -40,8 +44,6 @@
   ! setTimeout(callback, time) 
     -> E uma função que criar um timer
 */
-
-const fs = require("fs");
 
 // * 1. Callbacks
 
@@ -71,23 +73,31 @@ console.log("DEPOIS do setTimeout");
 /* 2. Promisses */
 
 
-const fs = require("fs");
 
-const promise = new Promise((resolve, reject) => {
-  fs.readFile("Java_Script/aula-13/arquivo.json", (erro, conteudoDoArquivo) => {
-    if (erro) {
-      reject("Ocorreu um erro ao tentar ler o arquivo: ", erro);
-    } else {
-      resolve(String(conteudoDoArquivo));
-    }
+function readFilePromises() {
+  return new Promise((resolve, reject) => {
+    const fs = require("fs");
+    fs.readFile("Java_Script/aula-13/arquivo.json", (erro, conteudoDoArquivo) => {
+      if (erro) {
+        reject("Ocorreu um erro ao tentar ler o arquivo: ", erro);
+      } else {
+        resolve(String(conteudoDoArquivo));
+      }
+    });
   });
-});
+}
 
-promise.then((returnOfResolution) => {
-  console.log(`Deu certo: ${returnOfResolution}`);
-}).catch((err) => {
-  console.log(`Deu erro: ${err}`)
-});
-
+readFilePromises()
+  .then((returnOfResolution) => {
+    console.log(`Deu certo: ${returnOfResolution}`);
+  })
+  .catch((err) => {
+    console.log(`Deu erro: ${err}`);
+  })
+  .finally(() => {
+    console.log(
+      "Isso aqui vai ser executado indepêndente do sucesso ou fracasso da promessa, no final dela"
+    );
+  });
 
 
