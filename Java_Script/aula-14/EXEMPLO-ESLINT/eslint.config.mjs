@@ -7,14 +7,15 @@ export default [
   pluginJs.configs.recommended,
 
   {
-    files: ["index.js"], 
+    files: ["index.js", "arquivo.js"], 
     languageOptions: {
       sourceType: "commonjs", 
       globals: globals.node, 
     },
     rules: {
       "semi": ["error", "always"], 
-      "quotes": ["error", "double"], 
+      "quotes": ["error", "double"],
+      "no-unused-vars": "off"
     },
   },
 ];
