@@ -14,6 +14,10 @@
         1. Lendo um arquivo JSON
         2. Convertendo JSON, em formato de string, para um objeto
         3. Convertendo um objeto do JS, em um JSON (string)
+
+    * Métodos:
+      1. JSON.parse transforma a String em objeto no JavaScript
+      2. JSON.stringify transforma um objeto do JavaScript em String
 */
 
 const aula = "JSON";
