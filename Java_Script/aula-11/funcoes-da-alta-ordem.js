@@ -4,7 +4,7 @@
   ? First Class Function
     -> Uma linguagem de programação é tem First Class Function quando as funções nessa linguagem são tratadas como qualquer outra variavel.
 
-    -> Uma função pode ser passada como paramnetro para outra função, assim como podee ser retornada por uma função e essa retorna pode ser atribuida a uma variavel
+    -> Uma função pode ser passada como paramentro para outra função, assim como podee ser retornada por uma função e essa retorna pode ser atribuida a uma variavel
   ? High Order Function
     -> Uma função que recebe outra função como parâmentro/argumento, ou uma função que retorna outra função.
     1. Função que retorna outra função como parâmentro(Cloujure).
