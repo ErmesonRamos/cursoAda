@@ -22,5 +22,17 @@
       -> Ter uma arquitetura formada por clientes, servidores e recursos, com solicitações gerenciadas por HTTP.
       -> Estabelecer uma comunicação stateless entre cliente e servidor. Isso significa que nenhuma informação do cliente é armazenada entre solicitações GET e todas as solicitações são separadas e desconectadas.
       -> Armazenar dados em cache para otimizar as interações entre cliente e servidor. 
+      -> Ter uma interface uniforme entre os componentes para que as informações sejam transferidas em um formato padronizado.
+      -> Ter um sistema em camadas que organiza os tipos de servidores(responsáveis pela segurança, pelo carregamento de carga e assim por diante) envolvidos na revuperação das informações solicitações em hierarquias que o cliente não pode ver.
+      -> Possibilidade código sob demanda (opcional): a capacidade de enviar um código executável do servidor para o cliente quando solicitado para ampliar a funcionaliade disponivel ao cliente.
+
+    * Características de APIs REST 
+    -> Os recursos são solicitados/ enviados via protocolo HTTP.
+    -> URI Base(Base URL): Várias APIs fornecem um "endereço base".Todas as suas requisições incluirão esse endereço, e ao final dele nós colocamos detalhes específicos para cada um dos recursos disponíveis.
+    -> Formato do dado/recurso: Algumas APIs possuem formatos fixos de dados. Outras permitem que voçê escolha. È comum, por exemplo, que uma API permite que voçê escolha entre JSON, XML, CSV e/ou outros formatos.
+    -> Schemas: È bastante comum que as APIs disponibilizem um "modelo" genérico de como será formatado o seu JSO para que os desenvolvedores saibam quias campos esperar e quais tipos de dados serão possiveis para cada campo. Por exemplo:
+      {
+        "nome": string,
+        "pontuacao": interger
+      }
 */
- 
