@@ -30,9 +30,21 @@
     -> Os recursos são solicitados/ enviados via protocolo HTTP.
     -> URI Base(Base URL): Várias APIs fornecem um "endereço base".Todas as suas requisições incluirão esse endereço, e ao final dele nós colocamos detalhes específicos para cada um dos recursos disponíveis.
     -> Formato do dado/recurso: Algumas APIs possuem formatos fixos de dados. Outras permitem que voçê escolha. È comum, por exemplo, que uma API permite que voçê escolha entre JSON, XML, CSV e/ou outros formatos.
-    -> Schemas: È bastante comum que as APIs disponibilizem um "modelo" genérico de como será formatado o seu JSO para que os desenvolvedores saibam quias campos esperar e quais tipos de dados serão possiveis para cada campo. Por exemplo:
+    -> Schemas: È bastante comum que as APIs disponibilizem um "modelo" genérico de como será formatado o seu JSON para que os desenvolvedores saibam quais campos esperar e quais tipos de dados serão possiveis para cada campo. Por exemplo:
       {
         "nome": string,
         "pontuacao": interger
       }
+    -> Autentificação: Outro aspecto importante é a autentificação. Enquanto alguma APIs são grátis / abertas, outras são pagas. Ainda temos algumas híbridas (é possivel acessar gratuitamente certos recursos, ou consumir um certo volume de dados, e acima disso você deverá pagar).
+
+      a. Os dois modelos mais comuns de autentificação:
+        i. Chave: Ao fazer seu registro, você recebera uma chave que deverá ser passada na requição. 
+        ii. OAuth: Um esquema um pouco mais complexo onde são combinados códigos de autorização, identificação do cliente e segredo do cliente em um POST, e o servidor cria uma sessão por um tempo  limitado e frnece o ID da mesma. APIs de gigantes da internet (como google e Facebook) costumam usar esse modelo.
+
+    -> Endpoint: A URL completa que deve ser acessado a fim de obter um recurso específico.
+      a. Dictionary API:
+        https://api.dictionaryapi.dev/api/v2/entries/en/hello.
+      b. OpenWeather API:
+        https://api.openweathermap.org/data/2.5/weather?last={lat}&lon={lon}&appid={API key}.
 */
+
