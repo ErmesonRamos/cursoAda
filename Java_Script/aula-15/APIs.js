@@ -49,7 +49,10 @@
       b. OpenWeather API:
         https://api.openweathermap.org/data/2.5/weather?last={lat}&lon={lon}&appid={API key}.
     * Exemplos de APIs de terceiros
-        1.PokéAPI
-        2.
+        1.PokéAPI -> Pokémon
+        2.OpenWeather -> Climatico
+        3.Git Hub -> 
 */
+
+
 
