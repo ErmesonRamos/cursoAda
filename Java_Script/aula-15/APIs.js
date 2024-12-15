@@ -47,12 +47,26 @@
       a. Dictionary API:
         https://api.dictionaryapi.dev/api/v2/entries/en/hello.(GET)
       b. OpenWeather API:
-        https://api.openweathermap.org/data/2.5/weather?last={lat}&lon={lon}&appid={API key}.
+        https://api.openweathermap.org/data/2.5/weather?last={lat}&lon={lon}&appid={ API key}.
     * Exemplos de APIs de terceiros
-        1.PokéAPI -> Pokémon
-        2.OpenWeather -> Climatico
-        3.Git Hub -> 
+        1.PokéAPI -> Pokémon.
+        2.OpenWeather -> Climatico.
+        3.Git Hub -> Resporsitorios.
+        4.APIs públicas -> APIs disponiveis para praticar .
+
+    * Como testar APIs (Documentação).
+        1. Navegador.
+        2. Software (Postman e Insomnia).
+
+    * Existem outros tipos de APIs
+      utilizando o JS para interagir com páginas web.
+
+        1. Document API -> DOM.
+        2. Notifications API -> Notificações.
+        3. Web Storage API -> Armazenar dados.
+        4. Fetch API -> Requisições HTTP.
 */
+
 
 
 
