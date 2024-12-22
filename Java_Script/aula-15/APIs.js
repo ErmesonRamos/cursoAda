@@ -4,13 +4,13 @@
     -> Hoje em dia é muito comum que diferentes aplicações consumam dados pela internet, muitas vezes dados providenciados por terceiros.
     -> Por exemplo, um aplicativo de entrega de alimentos pode usar dados de geolocalização do Google para localizar restaurantes próximos ao usário e exibir a rota percorrida pelo entregador.
     -> Como essas aplicações podem estar rodando em diferentes plataformas e linguagens de programação, é importante estabelecer uma "Liguagem comum" para que todos consigam esses dados.
-    -> A API é uma interface que nos permite utilizar funcionalidades/ recursos de terceiros, seguindo um conjuto de definições/ contratos estabelecidos pelo terceiro.
+    -> A API é uma interface que nos permite utilizar funcionalidades / recursos de terceiros, seguindo um conjuto de definições / contratos estabelecidos pelo terceiro.
     * Exemplos:
       -> Login social
       -> Pagamento Online
     -> A API acaba facilitando a vida dos programadores, pois reduz o tempo de desenvolvimento de novas aplicações.
     * Tipos de APIs:
-      1.Públicas ou abertas
+      1. Públicas ou abertas
       2. Privadas ou internas
       3. APIs de Parceiras
 
@@ -25,12 +25,12 @@
       -> Estabelecer uma comunicação stateless entre cliente e servidor. Isso significa que nenhuma informação do cliente é armazenada entre solicitações GET e todas as solicitações são separadas e desconectadas.
       -> Armazenar dados em cache para otimizar as interações entre cliente e servidor. 
       -> Ter uma interface uniforme entre os componentes para que as informações sejam transferidas em um formato padronizado.
-      -> Ter um sistema em camadas que organiza os tipos de servidores(responsáveis pela segurança, pelo carregamento de carga e assim por diante) envolvidos na revuperação das informações solicitações em hierarquias que o cliente não pode ver.
+      -> Ter um sistema em camadas que organiza os tipos de servidores( responsáveis pela segurança, pelo carregamento de carga e assim por diante ) envolvidos na recuperação das informações solicitações em hierarquias que o cliente não pode ver.
       -> Possibilidade código sob demanda (opcional): a capacidade de enviar um código executável do servidor para o cliente quando solicitado para ampliar a funcionaliade disponivel ao cliente.
 
     * Características de APIs REST 
-    -> Os recursos são solicitados/ enviados via protocolo HTTP.
-    -> URI Base(Base URL): Várias APIs fornecem um "endereço base".Todas as suas requisições incluirão esse endereço, e ao final dele nós colocamos detalhes específicos para cada um dos recursos disponíveis.
+    -> Os recursos são solicitados / enviados via protocolo HTTP.
+    -> URI Base (Base URL): Várias APIs fornecem um "endereço base".Todas as suas requisições incluirão esse endereço, e ao final dele nós colocamos detalhes específicos para cada um dos recursos disponíveis.
     -> Formato do dado/recurso: Algumas APIs possuem formatos fixos de dados. Outras permitem que voçê escolha. È comum, por exemplo, que uma API permite que voçê escolha entre JSON, XML, CSV e/ou outros formatos.
     -> Schemas: È bastante comum que as APIs disponibilizem um "modelo" genérico de como será formatado o seu JSON para que os desenvolvedores saibam quais campos esperar e quais tipos de dados serão possiveis para cada campo. Por exemplo:
       {
@@ -41,7 +41,7 @@
 
       a. Os dois modelos mais comuns de autentificação:
         i. Chave: Ao fazer seu registro, você recebera uma chave que deverá ser passada na requição. 
-        ii. OAuth: Um esquema um pouco mais complexo onde são combinados códigos de autorização, identificação do cliente e segredo do cliente em um POST, e o servidor cria uma sessão por um tempo  limitado e frnece o ID da mesma. APIs de gigantes da internet (como google e Facebook) costumam usar esse modelo.
+        ii. OAuth: Um esquema um pouco mais complexo onde são combinados códigos de autorização, identificação do cliente e segredo do cliente em um POST, e o servidor cria uma sessão por um tempo  limitado e fornece o ID da mesma. APIs de gigantes da internet (como google e Facebook) costumam usar esse modelo.
 
     -> Endpoint: A URL completa que deve ser acessado a fim de obter um recurso específico.
       a. Dictionary API:
