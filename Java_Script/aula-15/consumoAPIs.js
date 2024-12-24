@@ -16,11 +16,16 @@ fetch("https://viacep.com.br/ws/01001000/json/")
   });
 
 // async / await
-
 async function getDatasFromCep() {
-  const response = await fetch("https://viacep.com.br/ws/01001000/json/");
-  const datas = await response.json();
-  console.log(datas);
+  try {
+    const response = await fetch("https://viacep.com.br/ws/01001000/json/");
+    const datas = await response.json();
+    console.log(datas);
+  } catch (erro) {
+    console.log('Deu errado: ', erro);
+  } finally {
+    console.log('Terminou a requisição');
+  }
 }
 
 getDatasFromCep();
