@@ -37,7 +37,6 @@ async function createUser() {
   }
 
   try {
-    
 
     await fetch("https://dummyapi.io/data/v1/user/create", {
       method: 'POST',
