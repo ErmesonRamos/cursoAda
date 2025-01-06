@@ -1,3 +1,5 @@
-var num1 = 1;
-var num2 = 2;
-console.log(num1 + num2);
+"use strict";
+function add(num1, num2) {
+    return num1 + num2;
+}
+console.log(add(7, 1));
