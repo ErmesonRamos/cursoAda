@@ -1,5 +1,5 @@
 /*
-  ! TypeScript 
+  ! TypeScript I
     -> Nada mas é que do que o JavaScript com a adição de tipagem estatíca.
     * Por que estudar o TypeScript
       -> Types.
@@ -19,5 +19,24 @@
       3.1. `npx tsc 'nomedoarquivoparasercompliado --watch'`
       4. Mexer nas configurações do TypeScript
         4.1 `npx tsc --init`
+
+  ! TypeScript II
+    * Tipagens
+
+    -> Inferência de tipos o TypeScript indêntifica o tipo de dado quando eu passo direto para a variável. 
+
+    1.1. Numeros = Number
+    1.2. Letras e caracteres = String
+    1.3. verdadeiro ou falso = Boolean
+    1.4. Arrays = {
+      * Exemplo 1: 
+        1.1. const myArray: number[] = [1, 2, 4, 5];
+      * Exemplo 2:
+        1.1. const myArrayRandom: (number | string)[] = ['Ermeson', 17, 1.70];
+      * Exemplo 3:
+        1.1. const myOtherArray: Array<number>  = [1, 2, 3, 4,];    
+    }
+    ? Evite sempre utilizar o any para tipagem em TypeScript você está anulando o TypeScript.
+
 */
 
