@@ -43,6 +43,7 @@
     * Object Types 
       -> São objetos que possuem um nome e um tipo de dados para cada chave.
       -> Exemplo: const person: {name: string, age: number} = {name: 'Ermeson', age: 17};
+
       * Interface 
         -> uma interface é uma estrutura que define a forma de um objeto. Ela serve como um contrato, especificando quais propriedades e métodos um objeto deve ter, incluindo seus tipos, mas sem implementar a lógica desses métodos. Interfaces são úteis para garantir que diferentes partes do código sigam um padrão consistente.
 
@@ -61,6 +62,33 @@
         work?: string; -> Essa ? significa que o atributo não é obrigatorio.
         heigth: number;
       }
+
+      * Type 
+        -> é usado para descrever a forma e a estrutura de objetos, especificando as propriedades que um objeto deve ter e seus respectivos tipos. Ele é uma das maneiras de criar tipos personalizados no TypeScript
+
+        const person: PersonType = {
+        name: 'Ermeson',
+        age: 17,
+        work: 'Develop',
+        heigth: 1.70
+      }
+
+      console.log(person);
+
+      //Type
+      type PersonType = {
+        name: string;
+        age: number;
+        work?: string;
+        heigth: number;
+      }
+
+      ! Diferença entre o Type eo Interface 
+          -> Em TypeScript, tanto interface quanto type podem ser usados para definir tipos de objetos. Eles compartilham muitas semelhanças, mas têm algumas diferenças importantes. A escolha entre os dois geralmente depende do caso de uso e das preferências pessoais ou da equipe.Type é ultilizado de forma mais génerica
+
+    * Union Types
+      
+
 
 
     ? Evite sempre utilizar o any para tipagem em TypeScript você está anulando o TypeScript.

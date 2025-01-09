@@ -48,12 +48,32 @@ interface Person {
   heigth: number;
 }
 
-const person: Person = {
+const person: PersonType = {
   name: 'Ermeson',
   age: 17,
   work: 'Develop',
   heigth: 1.70
 }
 
+console.log(person);
+
+//Type
+type PersonType = {
+  name: string;
+  age: number;
+  work?: string;
+  heigth: number;
+}
+
+
+
+function chooseNumber(number1: number, number2: number, criterio?: 'greater' | 'lower') {
+  const numberRandom = Math.random();
+  if(numberRandom >= 0.75) return number1;
+  return number2;
+}
+
+const numberChosen = chooseNumber(10, 20);
+console.log('Numero escolhido: ', numberChosen);
 
 

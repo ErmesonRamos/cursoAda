@@ -29,3 +29,12 @@ const person = {
     work: 'Develop',
     heigth: 1.70
 };
+console.log(person);
+function chooseNumber(number1, number2, criterio) {
+    const numberRandom = Math.random();
+    if (numberRandom >= 0.75)
+        return number1;
+    return number2;
+}
+const numberChosen = chooseNumber(10, 20);
+console.log('Numero escolhido: ', numberChosen);
