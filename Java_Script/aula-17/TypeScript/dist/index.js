@@ -15,4 +15,17 @@ ages.push(17);
 ages.push(18);
 ages.push(20);
 ages.push(25);
-console.log(ages[1]);
+console.log(ages);
+const minorsFromAge = ages.filter((age) => age < 18);
+console.log(minorsFromAge);
+for (const age of ages) {
+    console.log(age);
+}
+;
+const personTupla = ['Ermeson', 17];
+const person = {
+    name: 'Ermeson',
+    age: 17,
+    work: 'Develop',
+    heigth: 1.70
+};

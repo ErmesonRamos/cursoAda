@@ -36,6 +36,33 @@
       * Exemplo 3:
         1.1. const myOtherArray: Array<number>  = [1, 2, 3, 4,];    
     }
+    * Tuplas
+      -> Sempre vai ter dois valores com o mesmo objetivo.
+      ->Exemplo: const person: [string, number] = ['Ermeson', 17];
+
+    * Object Types 
+      -> São objetos que possuem um nome e um tipo de dados para cada chave.
+      -> Exemplo: const person: {name: string, age: number} = {name: 'Ermeson', age: 17};
+      * Interface 
+        -> uma interface é uma estrutura que define a forma de um objeto. Ela serve como um contrato, especificando quais propriedades e métodos um objeto deve ter, incluindo seus tipos, mas sem implementar a lógica desses métodos. Interfaces são úteis para garantir que diferentes partes do código sigam um padrão consistente.
+
+        const person: Person = {
+        name: 'Ermeson',
+        age: 17,
+        work: 'Develop',
+        heigth: 1.70
+      }
+
+
+      //Interface
+      interface Person {
+        name: string;
+        age: number;
+        work?: string; -> Essa ? significa que o atributo não é obrigatorio.
+        heigth: number;
+      }
+
+
     ? Evite sempre utilizar o any para tipagem em TypeScript você está anulando o TypeScript.
 
 */
