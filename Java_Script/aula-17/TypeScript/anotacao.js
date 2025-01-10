@@ -87,11 +87,22 @@
           -> Em TypeScript, tanto interface quanto type podem ser usados para definir tipos de objetos. Eles compartilham muitas semelhanças, mas têm algumas diferenças importantes. A escolha entre os dois geralmente depende do caso de uso e das preferências pessoais ou da equipe.Type é ultilizado de forma mais génerica
 
     * Union Types
-      
+          -> O Union Type em TypeScript é um recurso que permite que uma variável, parâmetro ou propriedade assuma um valor de mais de um tipo definido. É usado quando você quer que algo possa ser de múltiplos tipos, mas não necessariamente ao mesmo tempo.
+
+    * Literal Type  
+          ->  O Literal Type em TypeScript permite especificar que uma variável ou parâmetro pode assumir apenas um valor específico, ao invés de um tipo genérico como string, number, ou boolean. Ele é muito útil para criar tipos mais restritivos e previsíveis.
+
+          Os Literal Types podem ser usados com strings, números ou booleanos, e combinados com outros recursos do TypeScript, como Union Types e Type Aliases.
+    * Type Aliases 
+      -> Em TypeScript, um Type Alias (ou "alias de tipo") é uma forma de criar um nome personalizado para um tipo existente ou para um conjunto de tipos. Ele é usado para melhorar a legibilidade, a reutilização e a organização do código.
+    * Tipagem de funções 
+      -> A tipagem de função em TypeScript permite definir o tipo de seus parâmetros e do valor de retorno. Isso ajuda a garantir segurança e clareza no código, prevenindo erros comuns e facilitando o trabalho em equipes.
 
 
 
     ? Evite sempre utilizar o any para tipagem em TypeScript você está anulando o TypeScript.
+
+    ! Sempre que for criar um Type ou Interface tem que iniciar com letra maiuscula PascalCalse.
 
 */
 

@@ -31,10 +31,18 @@ const person = {
 };
 console.log(person);
 function chooseNumber(number1, number2, criterio) {
-    const numberRandom = Math.random();
-    if (numberRandom >= 0.75)
-        return number1;
-    return number2;
+    switch (criterio) {
+        case 'greater':
+            return number1 > number2 ? number1 : number2;
+        case 'lower':
+            return number1 < number2 ? number1 : number2;
+        default:
+            const numberRandom = Math.random();
+            if (numberRandom >= 0.75)
+                return number1;
+            return number2;
+    }
+    ;
 }
-const numberChosen = chooseNumber(10, 20);
+const numberChosen = chooseNumber(10, 20, 'lower');
 console.log('Numero escolhido: ', numberChosen);

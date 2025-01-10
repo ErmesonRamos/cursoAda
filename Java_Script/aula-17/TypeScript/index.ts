@@ -65,15 +65,26 @@ type PersonType = {
   heigth: number;
 }
 
+type Criterio = 'greater' | 'lower';
 
-
-function chooseNumber(number1: number, number2: number, criterio?: 'greater' | 'lower') {
-  const numberRandom = Math.random();
-  if(numberRandom >= 0.75) return number1;
-  return number2;
+function chooseNumber(
+  number1: number, 
+  number2: number, 
+  criterio?: Criterio 
+): number {
+  switch(criterio) {
+    case 'greater':
+      return number1 > number2 ? number1 : number2
+    case 'lower':
+      return number1 < number2 ? number1 : number2
+    default: 
+      const numberRandom = Math.random();
+      if(numberRandom >= 0.75) return number1;
+      return number2;
+  }; 
 }
-
-const numberChosen = chooseNumber(10, 20);
+const numberChosen = chooseNumber(10, 20, 'lower');
 console.log('Numero escolhido: ', numberChosen);
+
 
 
