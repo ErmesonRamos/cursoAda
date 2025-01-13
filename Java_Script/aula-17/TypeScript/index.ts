@@ -87,4 +87,38 @@ const numberChosen = chooseNumber(10, 20, 'lower');
 console.log('Numero escolhido: ', numberChosen);
 
 
+// * Utility Types
+// 1. Partial
+  
+type PersonPartial = Partial<Person>;
+
+// 2. Required
+
+type PersonRequired = Required<Person>;
+
+// 3. Pick
+
+type PersonPicked = Pick<Person, 'name' | 'age'>
+
+// 4. Omit
+
+type PersonOmit = Omit<Person, 'work' >
+
+// 5. Exclude
+
+type CriterioExclude = Exclude<Criterio, 'greater'>;
+
+// 6. Record
+
+type Persons = Record<string, Person>
+
+const persons: Persons = {
+  '108.010.353-84': {
+    name: 'Ermeson',
+    age: 17,
+    work: 'Develop',
+    heigth: 1.70
+  }
+}
+
 

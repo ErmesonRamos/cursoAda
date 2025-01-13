@@ -46,3 +46,11 @@ function chooseNumber(number1, number2, criterio) {
 }
 const numberChosen = chooseNumber(10, 20, 'lower');
 console.log('Numero escolhido: ', numberChosen);
+const persons = {
+    '108.010.353-84': {
+        name: 'Ermeson',
+        age: 17,
+        work: 'Develop',
+        heigth: 1.70
+    }
+};

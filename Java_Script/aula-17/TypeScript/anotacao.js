@@ -98,6 +98,35 @@
     * Tipagem de funções 
       -> A tipagem de função em TypeScript permite definir o tipo de seus parâmetros e do valor de retorno. Isso ajuda a garantir segurança e clareza no código, prevenindo erros comuns e facilitando o trabalho em equipes.
 
+    * Utility Type
+      -> A ideia deles é permiter que você crie novos tipos a partir de tipos já existentes.
+
+        ? 1.1. Partial
+          -> Quando você utilizar o partial e envolve <> o nome de alguma interface todos os atributos vão se torna não obrigatorio.
+          * Exemplo: type PersonPartial = Partial<Person>;
+
+        ? 1.2. Required
+          -> Quando você utilizar o partial e envolve <> o nome de alguma interface todos os atributos vão se torna obrigatorio.
+          * Exemplo: type PersonRequired = Required<Person>;
+
+        ? 1.3. Pick
+          -> A parti de uma interface já existente pegar alguns atributos dela.
+          * Exemplo: type PickPerson = Pick<Person, 'name' | 'age'>;
+
+        ? 1.4. Omit
+          -> Omitir ou esconder alguns atributos.
+          * Exemplo: type OmitPerson = Omit<Person, 'work'>;
+
+        ? 1.5. Exclude
+          -> A ideia é ele excluir alguns atributos.
+          * Exemplo: type CriterioExclude = Exclude<Criterio, 'greater'>;
+
+        ? 1.6. Record
+          ->O Record em TypeScript é um utility type usado para criar um objeto tipado onde as chaves pertencem a um conjunto específico de tipos e os valores têm outro tipo específico.Ele é útil para criar dicionários ou mapas de maneira tipada, fornecendo um controle mais robusto sobre as chaves e os valores de um objeto.
+
+          * Exemplo: type Persons = Record<string, Person>;
+
+
 
 
     ? Evite sempre utilizar o any para tipagem em TypeScript você está anulando o TypeScript.
