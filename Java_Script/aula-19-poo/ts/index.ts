@@ -16,6 +16,7 @@ class Person implements IPerson {
   weight: number;
   private _cpf: string;
 
+
   // métodos: ação(Funções)
 
   // Método construtor
@@ -37,15 +38,38 @@ class Person implements IPerson {
 
   // accessor: setter
   set cpf(newCpf: string) {
+    if(newCpf.length !== 14) {
+      //Lançando um erro.
+      throw new Error('CPF length is incorrect');
+    }
     this._cpf = newCpf;
   }
 
 };
 
-// Criando/Instanciando uma pessoa(Indivíduo / Objeto) a partir da definição da classe Person
+class Teacher extends Person implements IPerson {
+  code: string;
+
+  constructor(name: string, age: number, height: number, weight: number, cpf: string, code: string) {
+    super(name, age, height, weight, cpf);
+    this.code = code;    
+  }
+
+  teach() {
+    console.log('Ensinando...');
+  }
+}
+// Criando/Instanciando uma pessoa(Indivíduo / Objeto) a partir da definição da classe Person.
 
 const person1 = new Person('Ermeson', 17, 1.70, 80, '108.010.353-84');
 
 console.log(person1);
 console.log(person1.cpf);
+
+//Objeto da classe teacher
+const teach1 = new Teacher('Professor', 30, 1.70, 80, '108.010.353-10', '001');
+console.log(teach1);
+
+//Polimorfismo
+console.log(person1 instanceof Person);
 

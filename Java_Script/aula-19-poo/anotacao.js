@@ -43,6 +43,22 @@
                 set cpf(newCpf: string) {
                  this._cpf = newCpf;
                 }
+      ? 6. Herança
+          -> Se várias classes terão atributos e métodos em comum, não devemos ter que redigitá-los várias vezes. Ao invés disso, criamos uma classe com esses atributos comuns e as outras classes irão herdá-los
+            * Exemplo:
+              class Teacher extends Person implements IPerson {
+              code: string;
+
+              constructor(name: string, age: number, height: number, weight: number, code: string) {
+                super(name, age, height, weight); -> Serve para herda o atributo.
+                this.code = code;    
+              }
+            }
+
+            * Polimorfismo
+              -> Objetos de diferentes classes herdadeiras de uma mesma classe mãe podem ser tratados genericamente como objetos pertecentes á classe mãe.   
+              ? Exemplo:
+                console.log(person1 instanceof Person);
 
         * Método construtor:
           -> O método construtor é um recurso fundamental na Programação Orientada a Objetos (POO), utilizado para inicializar os objetos de uma classe. Ele é executado automaticamente no momento em que um objeto é criado, configurando seus atributos iniciais ou executando operações essenciais para a configuração inicial do objeto.
