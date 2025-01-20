@@ -45,5 +45,21 @@
         3. element.value
           -> Serve apenas para campos de input.
 
+      ? Adicionar elementos na página Web.
+        1. document.createElement(nomeDaTag);
+          -> Serve para criar um novo elemento
+        2. element.appendChild(elementoFilho);
+          -> Serve para adicionar elementos filhos dentro da árvore HTML (no final) mais apena uma vez.
+        3. elementoPai.insertBefore('elemento novo criado', 'Aonde você quer adicionar');
+          -> Serve para você adicionar na posição na qual você quer
+
+      ? Removendo elementos
+        1. element.removeChild(elementoQueDeveSerRemovodo);
+          -> Serve para remover elementos.
+
+
+
+
+
 
 */

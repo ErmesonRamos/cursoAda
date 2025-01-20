@@ -36,5 +36,19 @@ primaryParagraph.innerHTML = '<strong> Negrito </strong>';
 
 
 console.clear();
-emailInput[0].value = 'Ermeson';
+emailInput[0].value = 'foco naquilo que você pode controlar';
+
+// Criando elemetos na página HTML
+const listUl = document.querySelector('#lista');
+const listLis = document.querySelectorAll('ul > li');
+const newTagLi = document.createElement('li');
+newTagLi.textContent = 'Segundo Item';
+// listUl.appendChild(newTagLi);
+listUl.insertBefore(newTagLi, listLis[1]);
+
+
+// Removendo elementos
+listUl.removeChild(newTagLi);
+
+
 
