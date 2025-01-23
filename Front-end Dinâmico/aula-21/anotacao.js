@@ -108,6 +108,11 @@
             1. requestIdleCallback
               -> Um evento que permite que você agende a execução de um código quando o navegador estiver ocioso (não ocupado com outros processos). 
            
+      ? Alterando os estilos CSS
+        * Estilo inline
+          -> counter.style.color = 'red';
 
+        * Manipulando Classes  
+          -> element.classList.add / remove('nomeDaClasse');
 
 */
