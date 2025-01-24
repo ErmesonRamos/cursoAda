@@ -132,10 +132,24 @@
         
 
         * LocalStorage e SessionStorage
+          -> Eles funciona em um modelo key-value
 
           -> O LocalStorage: ele guarda os dados de cada aplicação de forma isolada, baseado-se URL base da página. Todos esses dados, continuam armazenados mesmo se o navegador for fechado e aberto navamente.
 
           -> O SessionsStorage: o armazenamento funciona da mesma forma nele, mas os dados ficam disponíveis apenas durante a sessão da página. Em outras palavras, enquanto a aba navegador estiver aberta, o que inclui o carregamento e restauração de páginas, os dados serão guardados.
+
+
+        * Métodos
+          1. SetItem(key, value)
+            -> Esse método é usado para armazenar um valor associado a uma chave específica. 
+          2. GetItem
+            -> Esse método é usado para recuperar um valor armazenado usando a chave correspondente.
+          3. RemoveItem
+            -> Esse método remove um item específico do armazenamento, usando a chave.
+          4. Clear
+            -> Esse método remove todos os itens armazenados.
+
+
     
 
       
