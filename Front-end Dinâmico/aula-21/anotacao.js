@@ -115,4 +115,29 @@
         * Manipulando Classes  
           -> element.classList.add / remove('nomeDaClasse');
 
+      ? Web Storage API
+        -> Armazenamento de Dados do cliente.
+
+        * O Client-side Storage pode ser utilizado para diferentes finalidades, tais como:
+
+          -> Personalizar as preferências do site (Tema claro ou Escuro que usuário já escolheu em uma visita anterior site, por exemplo).
+
+          -> Atividade anterior persistte do site (por exemplo, armazenar o contéudo de um carrinho de compras de uma sessão anterior, lembrando se um usuário estava conectado anteriormente).
+
+          -> Salvar dados localmente para que o download de um site seja mais rápido.
+
+          -> Salvar, Localmente, Documentos gerados durante o uso de alguma aplicação para uso offine.
+
+        * Os tipos de Client-side Store que existem nos navegadores são: Cookies, Local Storage e Session.
+        
+
+        * LocalStorage e SessionStorage
+
+          -> O LocalStorage: ele guarda os dados de cada aplicação de forma isolada, baseado-se URL base da página. Todos esses dados, continuam armazenados mesmo se o navegador for fechado e aberto navamente.
+
+          -> O SessionsStorage: o armazenamento funciona da mesma forma nele, mas os dados ficam disponíveis apenas durante a sessão da página. Em outras palavras, enquanto a aba navegador estiver aberta, o que inclui o carregamento e restauração de páginas, os dados serão guardados.
+    
+
+      
+
 */
