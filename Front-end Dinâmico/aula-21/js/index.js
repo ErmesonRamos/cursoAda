@@ -49,14 +49,23 @@ console.log(increaseButton.classList);
 
 
 
+
 const themeButton = document.querySelector('#theme');
 let darkTheme;
 //Definindo uma função que será executada ao carregar o conteúdo da janela.
 window.onload = () => {
   const isDarkThemeStorage = localStorage.getItem('isDarkTheme');
   darkTheme = isDarkThemeStorage === 'true' ? true : false;
-  const body = document.querySelector('body');
+  replacementOfThemes()
+};
+themeButton.addEventListener('click', () => {
+  darkTheme = !darkTheme;
+  localStorage.setItem('isDarkTheme', darkTheme);
+  replacementOfThemes()
+});
 
+function replacementOfThemes() {
+  const body = document.querySelector('body');
   if(darkTheme) {
     body.style.backgroundColor = 'black';
     body.style.color = 'white';
@@ -64,17 +73,4 @@ window.onload = () => {
     body.style.backgroundColor = 'white';
     body.style.color = 'black';    
   } ; 
-};
-themeButton.addEventListener('click', () => {
-  const body = document.querySelector('body');
-  darkTheme = !darkTheme;
-  localStorage.setItem('isDarkTheme', darkTheme);
-  if(darkTheme) {
-    body.style.backgroundColor = 'black';
-    body.style.color = 'white';
-  } else {
-    body.style.backgroundColor = 'white';
-    body.style.color = 'black';    
-  };
-});
-
+}
