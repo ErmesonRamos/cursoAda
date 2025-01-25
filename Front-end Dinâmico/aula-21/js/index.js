@@ -42,14 +42,6 @@ counter.style.width = '150px';
 // Manipular classes
 console.log(increaseButton.classList);
 
-
-
-
-
-
-
-
-
 const themeButton = document.querySelector('#theme');
 let darkTheme;
 //Definindo uma função que será executada ao carregar o conteúdo da janela.
@@ -73,4 +65,4 @@ function replacementOfThemes() {
     body.style.backgroundColor = 'white';
     body.style.color = 'black';    
   } ; 
-}
+};
