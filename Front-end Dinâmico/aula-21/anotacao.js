@@ -140,13 +140,15 @@
 
 
         * Métodos
-          1. SetItem(key, value)
+
+          1. setItem(key, value)
             -> Esse método é usado para armazenar um valor associado a uma chave específica. 
-          2. GetItem
+          2. getItem(key)
             -> Esse método é usado para recuperar um valor armazenado usando a chave correspondente.
-          3. RemoveItem
+            -> O retorno dessa função sempre é passado como string
+          3. removeItem(key)
             -> Esse método remove um item específico do armazenamento, usando a chave.
-          4. Clear
+          4. clear
             -> Esse método remove todos os itens armazenados.
 
 

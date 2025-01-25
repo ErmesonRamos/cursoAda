@@ -40,20 +40,41 @@ counter.style.border = '1px solid #aaa';
 counter.style.width = '150px';
 
 // Manipular classes
-console.log(deacreaseButton.classList);
+console.log(increaseButton.classList);
+
+
+
+
+
+
 
 
 const themeButton = document.querySelector('#theme');
-let darkTheme = false;
-themeButton.addEventListener('click', () => {
+let darkTheme;
+//Definindo uma função que será executada ao carregar o conteúdo da janela.
+window.onload = () => {
+  const isDarkThemeStorage = localStorage.getItem('isDarkTheme');
+  darkTheme = isDarkThemeStorage === 'true' ? true : false;
   const body = document.querySelector('body');
-  darkTheme = !darkTheme;
+
   if(darkTheme) {
     body.style.backgroundColor = 'black';
     body.style.color = 'white';
   } else {
     body.style.backgroundColor = 'white';
-    body.style.color = 'black';
-  }
-  
+    body.style.color = 'black';    
+  } ; 
+};
+themeButton.addEventListener('click', () => {
+  const body = document.querySelector('body');
+  darkTheme = !darkTheme;
+  localStorage.setItem('isDarkTheme', darkTheme);
+  if(darkTheme) {
+    body.style.backgroundColor = 'black';
+    body.style.color = 'white';
+  } else {
+    body.style.backgroundColor = 'white';
+    body.style.color = 'black';    
+  };
 });
+
