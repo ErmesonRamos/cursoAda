@@ -8,16 +8,12 @@
 
 
 const form = document.querySelector('#todo-form');
-
 const taskTitleInput = document.querySelector('#task-title-input');
-
 const todoListUl = document.querySelector('#todo-list');
-
 let taks = [];
 
 form.addEventListener('submit', (event) => {
   event.preventDefault(); // Evita o comportamento padrão de recarregar a página ao submeter o formulário.
-
   const taskTitle = taskTitleInput.value;
 
   if (taskTitle.length < 3) {
@@ -30,15 +26,34 @@ form.addEventListener('submit', (event) => {
     title: taskTitle,
     done: false,
   });
-
-  
-  
+   
   const li = document.
   createElement('li');
 
   const input = document.createElement('input');
   // Ele vai setar o type do input.
   input.setAttribute('type', 'checkbox');
+  input.addEventListener('change', (event) => {
+
+    const liToToggle = event.target.parentElement;
+    const spanToToggle = liToToggle.querySelector('span');
+    const done = event.target.checked;
+
+    if (done) {
+      spanToToggle.style.textDecoration = 'line-through';
+    } else {
+      spanToToggle.style.textDecoration = 'none';
+    }
+
+    taks.map(t => {
+      if (t.title === spanToToggle.textContent) {
+        return {
+          title: t.tile,
+          done: !t.done,
+        }
+      }
+    });
+  });
 
   const span = document.createElement('span');
   span.textContent = taskTitle;
@@ -46,10 +61,17 @@ form.addEventListener('submit', (event) => {
   const button = document.createElement('button');
   button.textContent = 'Remover';
   button.addEventListener('click', (event) => {
+
+    const liToRemove = event.target.parentElement;
+    const titleToRemove = liToRemove.querySelector('span').textContent;
+    
+    taks = taks.filter((t) => t.title !== titleToRemove);
+    
     // target -> E basicamente se refere ao elemento que disparou o evento.
 
-    // parentElement -> 
-    console.log(event.target.parentElement);
+    // parentElement -> Em JavaScript, a propriedade .parentElement é usada para acessar o elemento pai de um determinado elemento no DOM (Document Object Model). Ela retorna o elemento pai mais próximo do elemento atual na hierarquia do DOM. Se o elemento não tiver um elemento pai (por exemplo, se for o nó raiz do documento), a propriedade retornará null.
+    todoListUl.removeChild(liToRemove);
+    
   });
   
   li.appendChild(input);
