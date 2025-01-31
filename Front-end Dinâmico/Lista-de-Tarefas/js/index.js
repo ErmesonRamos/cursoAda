@@ -13,15 +13,14 @@ const todoListUl = document.querySelector('#todo-list');
 let taks = [];
 
 function renderTaskOnHTML(taskTitle, done = false) {
-  const li = document.
-  createElement('li');
+  const li = document.createElement('li');
 
   const input = document.createElement('input');
   // Ele vai setar o type do input.
   input.setAttribute('type', 'checkbox');
   input.addEventListener('change', (event) => {
 
-    const liToToggle = event.target.parentElement;
+    const lliToTogge = event.target.parentElement;
     const spanToToggle = liToToggle.querySelector('span');
     const done = event.target.checked;
 
