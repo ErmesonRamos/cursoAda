@@ -27,7 +27,7 @@ form?.addEventListener('submit', async(event) => {
     sectionTimeInfor.innerHTML = `
       <div class="time-data">
         <h2>${infos.location}</h2>
-        <span>${infos.temperature}</span>
+        <span>${infos.temperature}°</span>
       </div>
       <img src="${infos.icon}" />
 
@@ -36,7 +36,6 @@ form?.addEventListener('submit', async(event) => {
     input.value = '';
   } catch (err) {
     console.log('Deu um erro na obtenção dos dados da API', err);
-  }
+  };
 
-  
 });

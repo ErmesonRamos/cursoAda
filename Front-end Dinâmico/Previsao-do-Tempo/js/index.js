@@ -30,7 +30,7 @@ form === null || form === void 0 ? void 0 : form.addEventListener('submit', (eve
         sectionTimeInfor.innerHTML = `
       <div class="time-data">
         <h2>${infos.location}</h2>
-        <span>${infos.temperature}</span>
+        <span>${infos.temperature}°</span>
       </div>
       <img src="${infos.icon}" />
 
@@ -40,4 +40,5 @@ form === null || form === void 0 ? void 0 : form.addEventListener('submit', (eve
     catch (err) {
         console.log('Deu um erro na obtenção dos dados da API', err);
     }
+    ;
 }));
