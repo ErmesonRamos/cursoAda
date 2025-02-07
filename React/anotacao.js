@@ -49,7 +49,48 @@
         2. Detectação de utilização de métodos do ciclo de vida que forem depreciados.
         3. Efeitos colaterais não esperados em componentes
 
+    
+    ! Componetização
+      -> Ela consiste em dividir um sistema em componentes independentes e reutilizáveis, facilitando a manutenção, escalabilidade e reutilização do código.
       
+      * Padrões de Renderização (Rendering Patterns).
+
+        ? SPA - single page application        
+          -> Single Page Application (SPA) é um tipo de aplicação web que carrega uma única página HTML e atualiza seu conteúdo dinamicamente, sem precisar recarregar a página inteira quando o usuário navega. 
+
+        ? SSR - Server Side Rendering(Next JS)
+          -> Server-Side Rendering (SSR) é uma técnica onde as páginas de um site são geradas no servidor antes de serem enviadas ao navegador. Isso significa que, ao acessar uma página, o servidor monta todo o HTML com o conteúdo dinâmico e entrega pronto para o usuário, ao invés de depender do JavaScript para construir tudo no lado do cliente (como acontece em SPAs puras).
+
+        ? SSG - Static Site Generation(Next JS)
+          -> Static Site Generation (SSG) é uma técnica onde as páginas de um site são pré-geradas no momento da build e servidas como arquivos HTML estáticos. Isso significa que, quando um usuário acessa o site, ele recebe uma página pronta, sem necessidade de processamento no servidor.
+
+      * Dois tipos de componentes
+        ? Class Componentes
+          -> Componentes baseados em classes
+          * Exemplos:
+            import React from "react"
+            
+            // Componente em classe é uma classe que herda a classe Componentes do React, e retorna HTML dentro método render.
+            class App extends React.Component {
+              // Método responsável por renderizar o contéudo HTML do nosso componente
+               render() {
+                return (
+                  <>
+                    <div>
+                      <h1>Aprendendo React</h1>
+                      <p>Isso aqui é um parágrafo</p>
+                    </div>
+                  </>
+                )
+              }
+            }
+            
+            export default App;
+            
+            
+
+        ? Function Componentes 
+          -> Componentes baseadas em funções
 
 
 
