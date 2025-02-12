@@ -135,6 +135,18 @@
           title: 'Exemplo
         }
 
+      * Estados
+        -> Estados são dados que são mantidos pelo componente e podem ser alterados em resposta a eventos ou interações do usuário.
+
+      * Aplicando estilo inline no react
+        <div style={{marginTop: '20px', marginLeft: '20px'}}>
+
+
+
+
+
+        
+
 
 */
 
