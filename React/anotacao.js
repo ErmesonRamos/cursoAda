@@ -136,7 +136,38 @@
         }
 
       * Estados
-        -> Estados são dados que são mantidos pelo componente e podem ser alterados em resposta a eventos ou interações do usuário.
+        -> Estados são dados que são mantidos pelo componente e podem ser alterados em resposta a eventos ou interações do usuário os estados sempre são passados em formato de objetos.
+        * Exemplo:
+          import React from "react";
+          
+          export class Counter extends React.Component {
+            constructor() {
+              super()
+              this.state = { counter: 0 }
+            }
+            render() {
+              return (
+                <div style={{ marginTop: '20px', marginLeft: '20px'}}>
+                  <h1> {this.state.counter} </h1>
+                  <div>
+                    <button onClick={() => {
+                      this.setState( { counter: this.state.counter - 1 })
+                      }}
+                      >
+                        Diminuir
+                      </button>
+                    <button onClick={
+                      () => {
+                       this.setState({ counter: this.state.counter + 1})
+                      }}
+                      >
+                        Aumentar
+                      </button>
+                  </div>
+                </div>
+              )
+            }
+          }
 
       * Aplicando estilo inline no react
         <div style={{marginTop: '20px', marginLeft: '20px'}}>
