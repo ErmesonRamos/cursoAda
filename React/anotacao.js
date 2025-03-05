@@ -172,6 +172,11 @@
       * Aplicando estilo inline no react
         <div style={{marginTop: '20px', marginLeft: '20px'}}>
 
+    ! React Legado III - Ciclo de Vida.
+      * Ciclo de Vuda no React
+        -> Fluxo de renderização dos componentes do React. Em outras palavras, trata-se de todas as etapas pelas quais componentes passa desde o seu surgimento (montagem) até o seu desaparecimento (desmontagem) na aplicação.
+
+        -> Conhecimento essencialmente para quem trabalho no React, ter esse conhecimento irá te ajudar a otimizar mais suas aplicações.
 
 
 
