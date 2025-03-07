@@ -178,15 +178,37 @@
 
         -> Conhecimento essencialmente para quem trabalho no React, ter esse conhecimento irá te ajudar a otimizar mais suas aplicações.
 
+      * Fases do ciclo de vida de um componente React
+        -> O ciclo de vida de um componente apresenta três fases:
 
+          1. Montagem - consiste no momento em que é criadoem tela(montado no DOM);
+          * Nesse momento o componente:
+            1. Recebe props.
+            2. Realiza chamada HTTP.
+            3. Inicializa seu estado.
+
+          2. Atualização - Sempre que alguns mudanças ocorra no componente, seja por alguma alteração de uma prop ou pela alteração de algum estado, passaremos por esta etapas do ciclo de vida.
+
+          3. Desmontagem - Consiste no momento em que o componente é removido da tela por não ser mais necessário. Isso ocorre quando mudamos de página ou quando alguma interação do usuário na remoção de um determinado componente da tela dar espaço a outro componente, por exemplo. 
+
+          ? Todas as fases/etapas do ciclo de vida irão dispor de alguns métodos que nos permitem acessá-las.
+
+      * Métodos do Ciclo de Vida
+        ? 1. Montagem 
+            1.1 contructor
+            1.2 componetWillMount
+            1.3 componetDidMount
+            1.4 render
+            
+        ? 2. Atualização
+            2.1 shouldComponetUpdate: Um método que será chamado sempre que houver uma mudança de props ou estados. Caso o seu retorno seja 'true', ocorrerá uma atualização do componente. Caso o retorno seja 'false' nada irá acontecer.
+
+            2.2 componetWillUpdate: O processo de atualização do componente foi iniciado.
+            
+            2.3 render: Renderização do componente.
 
 
         
 
 
 */
-
-
-
-
-

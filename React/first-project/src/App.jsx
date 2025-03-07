@@ -6,7 +6,7 @@ import { Article } from "./components/Article/Article";
 import article1Img from './assets/image/article1.png';
 import article2Img from './assets/image/article2.jpg';
 import article3Img from './assets/image/article3.avif';
-import { Counter } from "./components/Counter/Counter";
+
 // Componente em classe é uma classe que herda a classe Componentes do React, e retorna HTML dentro método render.
 class App extends React.Component {
 
@@ -14,10 +14,8 @@ class App extends React.Component {
    render() {
       return (
       <>
-        <Navbar />
-        {
-          /*
-            <section id="articles">
+        <Navbar />          
+        <section id="articles">
           <Article 
             title="Designing Dashboard"
             provider="Nasa"
@@ -46,9 +44,9 @@ class App extends React.Component {
            thumbnail={article1Img}
            />
         </section>
-          */
-        }
-        <Counter />
+         
+       
+        
         
         
       </>
