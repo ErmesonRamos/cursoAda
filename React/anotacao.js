@@ -47,7 +47,7 @@
       ? Exemplos de checagens de erro:
         1. Utilização do Content API legado
         2. Detectação de utilização de métodos do ciclo de vida que forem depreciados.
-        3. Efeitos colaterais não esperados em componentes
+        3. Efeitos colaterais não esperados em componentes.
 
     
     ! Componetização
@@ -173,7 +173,7 @@
         <div style={{marginTop: '20px', marginLeft: '20px'}}>
 
     ! React Legado III - Ciclo de Vida.
-      * Ciclo de Vuda no React
+      * Ciclo de Vida no React
         -> Fluxo de renderização dos componentes do React. Em outras palavras, trata-se de todas as etapas pelas quais componentes passa desde o seu surgimento (montagem) até o seu desaparecimento (desmontagem) na aplicação.
 
         -> Conhecimento essencialmente para quem trabalho no React, ter esse conhecimento irá te ajudar a otimizar mais suas aplicações.
@@ -181,7 +181,7 @@
       * Fases do ciclo de vida de um componente React
         -> O ciclo de vida de um componente apresenta três fases:
 
-          1. Montagem - consiste no momento em que é criadoem tela(montado no DOM);
+          1. Montagem - consiste no momento em que é criado em tela(montado no DOM);
           * Nesse momento o componente:
             1. Recebe props.
             2. Realiza chamada HTTP.
@@ -206,6 +206,8 @@
             2.2 componetWillUpdate: O processo de atualização do componente foi iniciado.
             
             2.3 render: Renderização do componente.
+
+        ? 3. 
 
 
         
