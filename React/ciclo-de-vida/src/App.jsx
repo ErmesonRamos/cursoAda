@@ -1,4 +1,5 @@
 import React from "react";
+import { Counter } from "./components/Counter/Counter";
 
 export default class App extends React.Component {
   constructor() {
@@ -15,6 +16,7 @@ export default class App extends React.Component {
           >
             { this.state.showCounter ? "Remover Contador" : " Mostrar Contador" }
           </button>
+          {this.state.showCounter ? <Counter /> : null}
         </div>
       );
    }
