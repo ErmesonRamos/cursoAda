@@ -13,12 +13,11 @@ export default class App extends React.Component {
         <button
           onClick={() => {
             this.setState( { showCounter: !this.state.showCounter } );
-            console.log(this.state.showCounter)
           }}
         >
           {this.state.showCounter ? "Remove Components" : "Show Components"}
         </button>
-        {this.state.showCounter? < Counter/> : null}
+        {this.state.showCounter ? <Counter /> : null}
       </div>
       
     )
