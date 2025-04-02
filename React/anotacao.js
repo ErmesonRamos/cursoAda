@@ -197,8 +197,8 @@
         ? 1. Montagem 
             1.1 contructor
             1.2 componetWillMount
-            1.3 componetDidMount
-            1.4 render
+            1.3 render 
+            1.4 componetDidMount
             
         ? 2. Atualização
             2.1 shouldComponetUpdate: Um método que será chamado sempre que houver uma mudança de props ou estados. Caso o seu retorno seja 'true', ocorrerá uma atualização do componente. Caso o retorno seja 'false' nada irá acontecer.
@@ -207,6 +207,8 @@
             
             2.3 render: Renderização do componente.
 
+            2.4 componetDidUpdate: O componente foi atualizado e já está na tela.
+
         ? 3. 
 
 
@@ -214,3 +216,4 @@
 
 
 */
+

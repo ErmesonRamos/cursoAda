@@ -14,7 +14,23 @@ export class Counter extends React.Component {
   componentDidMount() {
     console.log("O Nosso componente contador foi montado");
   }
+
+  shouldComponentUpdate() {
+    if(this.state.counter === 2) return false;
+    return true;
+    
+  }
+
+  UNSAFE_componentWillUpdate() {
+    console.log("O componente será atualizado!");
+  }
+
+  componentDidUpdate() {
+    console.log("Componente foi atualizado!");
+  }
+
   render() {
+    console.log("Rederizando o nosso componente Counter!");
     return (
       <>
         <h1>{this.state.counter}</h1>
